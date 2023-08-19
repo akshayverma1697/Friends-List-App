@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../UI/Card";
-//import classes from './AddUser.module.css'
+import classes from './AddUser.module.css'
 
 const AddUser = (props) => {
     //function when submit button is pressed
@@ -10,12 +10,12 @@ const AddUser = (props) => {
     }
 
     return (
-        <Card>
+        <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
-                <label htmlFor="username">Username</label>
-                <input id="username" type="text" />
-                <label htmlFor="age">Age (Years)</label>
-                <input id="age" type="number" />
+                <label htmlFor="username" className={classes.label}>Username</label>
+                <input id="username" type="text" className={classes.input}/>
+                <label htmlFor="age" className={classes.label}>Age (Years)</label>
+                <input id="age" type="number" className={classes.input}/>
                 <button type="submit">Submit</button>
             </form>
         </Card>
