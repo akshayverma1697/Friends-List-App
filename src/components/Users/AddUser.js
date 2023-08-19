@@ -11,9 +11,18 @@ const AddUser = (props) => {
     //function when submit button is pressed
     const addUserHandler = (event) => {
         event.preventDefault();
-        console.log(enteredAge, enteredUser);
-        setEnteredUser('');
-        setEnteredAge('');
+        if ((enteredUser.trim().length === 0) || (enteredAge.trim().length === 0)) {
+            return;
+        }
+        else if (enteredAge < 1) {
+            return;
+        }
+        else {
+            console.log(enteredAge, enteredUser);
+            setEnteredUser('');
+            setEnteredAge('');
+        };
+
     };
 
     const nameEditHandler = (event) => {
