@@ -17,7 +17,7 @@ const AddUser = (props) => {
                 <input id="username" type="text" className={classes.input}/>
                 <label htmlFor="age" className={classes.label}>Age (Years)</label>
                 <input id="age" type="number" className={classes.input}/>
-                <Button type='submit'/>
+                <Button type='submit'>Add User</Button>
             </form>
         </Card>
 
